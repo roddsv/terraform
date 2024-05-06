@@ -20,8 +20,8 @@ resource "aws_security_group" "bia-dev" {
 
   ingress {
     description = "Liberado 3001 para o mundo"
-    from_port   = 3001
-    to_port     = 3001
+    from_port   = 3000
+    to_port     = 3000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -46,6 +46,6 @@ ami = "ami-02f3f602d23f1659d"
     ]
 
     root_block_device {
-      volume_size = 10
+      volume_size = 12
     }
 }
